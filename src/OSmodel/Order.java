@@ -1,4 +1,4 @@
-package OS.model;
+package OSmodel;
 
 public class Order {
     

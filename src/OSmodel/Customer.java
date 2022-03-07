@@ -1,4 +1,4 @@
-package OS.model;
+package OSmodel;
 
 public abstract class Customer {
     
