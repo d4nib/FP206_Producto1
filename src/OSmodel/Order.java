@@ -1,24 +1,24 @@
 package OSmodel;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 public class Order {
-    private String orderSku;
+    private String orderID;
     private Product product; // Esto no está como en el diagrama. He añadido los productos en sí para respetar las relaciones
     private Customer customer;
     private int product_qty;
     private double subtotal;
     private double shipingFee;
-    private LocalTime creationDT;
+    private LocalDateTime creationDT;
     private int handling;
 
 
 
 
     // CONSTRUCTOR
-    public Order(String orderSku, Product product, Customer customer, int product_qty, double subtotal, double shipingFee,
-            LocalTime creationDT, int handling) {
-        this.orderSku = orderSku;
+    public Order(String orderID, Product product, Customer customer, int product_qty, double subtotal, double shipingFee,
+            LocalDateTime creationDT, int handling) {
+        this.orderID = orderID;
         this.product = product;
         this.customer = customer;
         this.product_qty = product_qty;
@@ -64,15 +64,15 @@ public class Order {
 
     // GETTERS & SETTERS
 
-    public String getorderSku() {
-        return orderSku;
+    public String getorderID() {
+        return orderID;
     }
 
 
 
 
-    public void setorderSku(String orderSku) {
-        this.orderSku = orderSku;
+    public void setorderID(String orderID) {
+        this.orderID = orderID;
     }
 
 
@@ -148,14 +148,14 @@ public class Order {
 
 
 
-    public LocalTime getCreationDT() {
+    public LocalDateTime getCreationDT() {
         return creationDT;
     }
 
 
 
 
-    public void setCreationDT(LocalTime creationDT) {
+    public void setCreationDT(LocalDateTime creationDT) {
         this.creationDT = creationDT;
     }
 
@@ -178,7 +178,7 @@ public class Order {
     @Override
     public String toString() {
         return "Order [creationDT=" + creationDT + ", customer=" + customer + ", handling=" + handling + ", product="
-                + product + ", product_qty=" + product_qty + ", shipingFee=" + shipingFee + ", orderSku=" + orderSku
+                + product + ", product_qty=" + product_qty + ", shipingFee=" + shipingFee + ", orderID=" + orderID
                 + ", subtotal=" + subtotal + "]";
     }
 
