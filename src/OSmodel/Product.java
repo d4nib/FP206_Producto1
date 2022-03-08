@@ -25,7 +25,6 @@ public class Product {
         this.handling = handling;
     }
 
-    // CHECKERS
 
    
 
